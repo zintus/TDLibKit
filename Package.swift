@@ -24,7 +24,8 @@ let package = Package(
     targets: [
         .target(
             name: "TDLibKit",
-            dependencies: ["TDLibFramework"]
+            dependencies: ["TDLibFramework"],
+            swiftSettings: [.unsafeFlags(["-Onone"])]
         ),
         .testTarget(
             name: "TDLibKitTests",
